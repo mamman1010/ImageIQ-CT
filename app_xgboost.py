@@ -66,10 +66,10 @@ if run_pred:
     col2.metric("📊 Predicted CNR", f"{cnr:.2f}")
 
     # === Simulated Evaluation Metrics (Optional)
-    y_fake = np.array([[snr + np.random.uniform(-1, 1), cnr + np.random.uniform(-1, 1)]])
-    mae = mean_absolute_error(y_fake, prediction)
-    rmse = np.sqrt(mean_squared_error(y_fake, prediction))
-    r2 = r2_score(y_fake, prediction)
+    #y_fake = np.array([[snr + np.random.uniform(-1, 1), cnr + np.random.uniform(-1, 1)]])
+    #mae = mean_absolute_error(y_fake, prediction)
+    #rmse = np.sqrt(mean_squared_error(y_fake, prediction))
+    #r2 = r2_score(y_fake, prediction)
 
     st.markdown("---")
     st.subheader("📈 Evaluation Metrics (Sampled)")
