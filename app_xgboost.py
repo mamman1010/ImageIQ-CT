@@ -71,9 +71,9 @@ if run_pred:
     #rmse = np.sqrt(mean_squared_error(y_fake, prediction))
     #r2 = r2_score(y_fake, prediction)
 
-    st.markdown("---")
-    st.subheader("📈 Evaluation Metrics (Sampled)")
-    col3, col4, col5 = st.columns(3)
+    #st.markdown("---")
+    #st.subheader("📈 Evaluation Metrics (Sampled)")
+    #col3, col4, col5 = st.columns(3)
     #col3.metric("📉 MAE", f"{mae:.2f}")
     #col4.metric("📉 RMSE", f"{rmse:.2f}")
     #col5.metric("🧠 R²", f"{r2:.2f}")
