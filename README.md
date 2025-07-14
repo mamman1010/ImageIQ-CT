@@ -1,4 +1,4 @@
-# CT Image Quality Predictor (Pro Version)
+# ImageIQ CT 
 
 This Streamlit app predicts **SNR and CNR** in abdominal CT using volume, circumference, and kVp as input.
 
