@@ -29,7 +29,7 @@ feature_names = [
 
 # === 📋 App Layout ===
 st.set_page_config(page_title="CT Predictor", layout="wide")
-st.title("🧠 CT Image Quality Predictor")
+st.title("🧠 ImageIQ-CT")
 st.markdown("Predict **SNR & CNR** from abdominal CT scan parameters using machine learning.")
 
 # === 🧭 SIDEBAR INPUTS
