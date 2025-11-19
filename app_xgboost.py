@@ -35,7 +35,7 @@ st.markdown("Predict **SNR & CNR** from abdominal CT scan parameters using machi
 # === 🧭 SIDEBAR INPUTS
 with st.sidebar:
     st.header("🛠 Input Parameters")
-    volume = st.number_input("Abdominal Volume (cm³)", min_value=0.0, format="%.2f")
+    volume = st.number_input("Abdominal Volume (l)", min_value=0.0, format="%.2f")
     circumference = st.number_input("Abdominal Circumference (cm)", min_value=0.0, format="%.2f")
     kvp = st.selectbox("Tube Voltage (kVp)", [80, 120])
     run_pred = st.button("🔍 Run Prediction")
@@ -182,3 +182,4 @@ if run_pred:
         file_name=f"CT_Report_{kvp}kVp_{timestamp.replace(' ', '_')}.pdf",
         mime="application/pdf"
     )
+
