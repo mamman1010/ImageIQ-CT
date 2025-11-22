@@ -35,8 +35,8 @@ st.markdown("Predict **SNR & CNR** from abdominal CT scan parameters using machi
 # === 🧭 SIDEBAR INPUTS
 with st.sidebar:
     st.header("🛠 Input Parameters")
-    volume = st.number_input("Abdominal Volume (l)", min_value=0.0, format="%.2f")
-    circumference = st.number_input("Abdominal Circumference (cm)", min_value=0.0, format="%.2f")
+    volume = st.number_input("Abdominal Volume (l)", min_value=0.0, max_value=30.0 format="%.2f")
+    circumference = st.number_input("Abdominal Circumference (cm)", min_value=0.0, max_value=150.0 format="%.2f")
     kvp = st.selectbox("Tube Voltage (kVp)", [80, 120])
     run_pred = st.button("🔍 Run Prediction")
 
@@ -71,11 +71,11 @@ if run_pred:
     #rmse = np.sqrt(mean_squared_error(y_fake, prediction))
     #r2 = r2_score(y_fake, prediction)
 
-    #st.markdown("---")
-    #st.subheader("📈 Evaluation Metrics (Sampled)")
-    #col3, col4, col5 = st.columns(3)
-    #col3.metric("📉 MAE", f"{mae:.2f}")
-    #col4.metric("📉 RMSE", f"{rmse:.2f}")
+    st.markdown("---")
+    st.subheader("📈 Evaluation Metrics (Sampled)")
+    col3, col4 = st.columns(2)
+    col3.metric("📉 MAE", f"{mae:.2f}")
+    col4.metric("📉 RMSE", f"{rmse:.2f}")
     #col5.metric("🧠 R²", f"{r2:.2f}")
 
     # === Plot Tabs
@@ -182,4 +182,5 @@ if run_pred:
         file_name=f"CT_Report_{kvp}kVp_{timestamp.replace(' ', '_')}.pdf",
         mime="application/pdf"
     )
+
 
